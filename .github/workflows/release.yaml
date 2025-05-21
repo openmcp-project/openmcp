@@ -80,6 +80,11 @@ jobs:
         run: |
           COMMIT_SHA=$(git rev-parse HEAD)
           PR_NUMBER=$(gh pr list --search "$COMMIT_SHA" --state merged --json number --jq '.[0].number')
+          if [ -z "$PR_NUMBER" ]; then
+            echo "No PR found for commit $COMMIT_SHA, skipping."
+            echo "body=" >> $GITHUB_OUTPUT
+            exit 0
+          fi
           gh pr view "$PR_NUMBER" --json body --jq .body
         env:
           GITHUB_TOKEN: ${{ github.token }}
