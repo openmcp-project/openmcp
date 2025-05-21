@@ -105,13 +105,13 @@ jobs:
         with:
           tag_name: ${{ env.version }}
           name: Release ${{ env.version }}
-          body: RELEASE_BODY.md
+          body_path: RELEASE_BODY.md
           draft: true
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: Push CTF
-        if: ${{ env.SKIP != 'true' }}
-        run: |
-          ocm transfer ctf --overwrite ./openmcp-ctf/ ${{ env.OCI_URL }} 
+      # - name: Push CTF
+      #   if: ${{ env.SKIP != 'true' }}
+      #   run: |
+      #     ocm transfer ctf --overwrite ./openmcp-ctf/ ${{ env.OCI_URL }} 

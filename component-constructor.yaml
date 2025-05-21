@@ -31,7 +31,6 @@ components:
           commit: "${OPENMCP_VERSION}"
           type: gitHub
           repoUrl: https://github.com/openmcp-project/openmcp
-          ref: refs/heads/main
         name: openmcp
         type: git
         version: ${OPENMCP_VERSION}
@@ -58,7 +57,6 @@ components:
           commit: ${MCP_OPERATOR_VERSION}
           type: gitHub
           repoUrl: https://github.com/openmcp-project/mcp-operator
-          ref: refs/heads/main
         name: openmcp
         type: git
         version: ${MCP_OPERATOR_VERSION}
@@ -79,7 +77,6 @@ components:
           commit: ${OPENMCP_OPERATOR_VERSION}
           type: gitHub
           repoUrl: https://github.com/openmcp-project/openmcp-operator
-          ref: refs/heads/main
         name: openmcp
         type: git
         version: ${OPENMCP_OPERATOR_VERSION}
@@ -106,7 +103,6 @@ components:
           commit: ${CONTROL_PLANE_OPERATOR_VERSION}
           type: gitHub
           repoUrl: https://github.com/openmcp-project/control-plane-operator
-          ref: refs/heads/main
         name: openmcp
         type: git
         version: ${CONTROL_PLANE_OPERATOR_VERSION}
@@ -133,7 +129,6 @@ components:
           commit: ${QUOTA_OPERATOR_VERSION}
           type: gitHub
           repoUrl: https://github.com/openmcp-project/quota-operator
-          ref: refs/heads/main
         name: openmcp
         type: git
         version: ${QUOTA_OPERATOR_VERSION}
@@ -161,7 +156,6 @@ components:
           commit: ${PROJECT_WORKSPACE_OPERATOR_VERSION}
           type: gitHub
           repoUrl: https://github.com/openmcp-project/project-workspace-operator
-          ref: refs/heads/main
         name: openmcp
         type: git
         version: ${PROJECT_WORKSPACE_OPERATOR_VERSION}
