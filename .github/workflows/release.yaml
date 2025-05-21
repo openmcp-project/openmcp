@@ -8,6 +8,8 @@ on:
       
 permissions:
   contents: write # we need this to be able to push tags
+  pull-requests: read
+  issues: read
 env:
   OCI_URL: ghcr.io/openmcp-project
   
@@ -74,6 +76,7 @@ jobs:
       - name: Get PR body for current commit
         id: release_highlights 
         if: ${{ env.SKIP != 'true' }}
+        
         run: |
           COMMIT_SHA=$(git rev-parse HEAD)
           PR_NUMBER=$(gh pr list --search "$COMMIT_SHA" --state merged --json number --jq '.[0].number')
