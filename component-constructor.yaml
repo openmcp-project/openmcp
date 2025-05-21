@@ -1,0 +1,168 @@
+# yaml-language-server: $schema=https://ocm.software/schemas/configuration-schema.yaml
+
+components:
+  - name: github.com/openmcp-project/openmcp
+    version: "${OPENMCP_VERSION}"
+    provider:
+      name: openmcp-project
+    componentReferences:
+      - componentName: github.com/openmcp-project/mcp-operator
+        name: mcp-operator
+        version: ${MCP_OPERATOR_VERSION}
+      
+      - componentName: github.com/openmcp-project/openmcp-operator
+        name: openmcp-operator
+        version: ${OPENMCP_OPERATOR_VERSION}
+
+      - componentName: github.com/openmcp-project/control-plane-operator
+        name: control-plane-operator
+        version: ${CONTROL_PLANE_OPERATOR_VERSION}
+
+      - componentName: github.com/openmcp-project/quota-operator
+        name: quota-operator
+        version: ${QUOTA_OPERATOR_VERSION}
+
+      - componentName: github.com/openmcp-project/project-workspace-operator
+        name: project-workspace-operator
+        version: ${PROJECT_WORKSPACE_OPERATOR_VERSION}
+
+    sources:
+      - access:
+          commit: "${OPENMCP_VERSION}"
+          type: gitHub
+          repoUrl: https://github.com/openmcp-project/openmcp
+          ref: refs/heads/main
+        name: openmcp
+        type: git
+        version: ${OPENMCP_VERSION}
+
+  - name: github.com/openmcp-project/mcp-operator
+    version: ${MCP_OPERATOR_VERSION}
+    provider:
+      name: openmcp-project
+    resources:
+      - name: mcp-operator-image
+        type: ociImage
+        version: ${MCP_OPERATOR_VERSION}
+        access:
+          type: ociArtifact
+          imageReference: ghcr.io/openmcp-project/images/mcp-operator:${MCP_OPERATOR_VERSION}
+      - name: mcp-operator-chart
+        type: helmChart
+        version: ${MCP_OPERATOR_VERSION}
+        access:
+          type: ociArtifact
+          imageReference: ghcr.io/openmcp-project/charts/mcp-operator:${MCP_OPERATOR_VERSION}
+    sources:
+      - access:
+          commit: ${MCP_OPERATOR_VERSION}
+          type: gitHub
+          repoUrl: https://github.com/openmcp-project/mcp-operator
+          ref: refs/heads/main
+        name: openmcp
+        type: git
+        version: ${MCP_OPERATOR_VERSION}
+
+  - name: github.com/openmcp-project/openmcp-operator
+    version: ${OPENMCP_OPERATOR_VERSION}
+    provider:
+      name: openmcp-project
+    resources:
+      - name: openmcp-operator-image
+        type: ociImage
+        version: ${OPENMCP_OPERATOR_VERSION}
+        access:
+          type: ociArtifact
+          imageReference: ghcr.io/openmcp-project/images/openmcp-operator:${OPENMCP_OPERATOR_VERSION}
+    sources:
+      - access:
+          commit: ${OPENMCP_OPERATOR_VERSION}
+          type: gitHub
+          repoUrl: https://github.com/openmcp-project/openmcp-operator
+          ref: refs/heads/main
+        name: openmcp
+        type: git
+        version: ${OPENMCP_OPERATOR_VERSION}
+
+  - name: github.com/openmcp-project/control-plane-operator
+    version: ${CONTROL_PLANE_OPERATOR_VERSION}
+    provider:
+      name: openmcp-project
+    resources:
+      - name: control-plane-operator-image
+        type: ociImage
+        version: ${CONTROL_PLANE_OPERATOR_VERSION}
+        access:
+          type: ociArtifact
+          imageReference: ghcr.io/openmcp-project/github.com/openmcp-project/control-plane-operator/images/control-plane-operator:${CONTROL_PLANE_OPERATOR_VERSION}
+      - name: control-plane-operator-chart
+        type: helmChart
+        version: ${CONTROL_PLANE_OPERATOR_VERSION}
+        access:
+          type: ociArtifact
+          imageReference: ghcr.io/openmcp-project/github.com/openmcp-project/control-plane-operator/charts/control-plane-operator:${CONTROL_PLANE_OPERATOR_VERSION}
+    sources:
+      - access:
+          commit: ${CONTROL_PLANE_OPERATOR_VERSION}
+          type: gitHub
+          repoUrl: https://github.com/openmcp-project/control-plane-operator
+          ref: refs/heads/main
+        name: openmcp
+        type: git
+        version: ${CONTROL_PLANE_OPERATOR_VERSION}
+
+  - name: github.com/openmcp-project/quota-operator
+    version: ${QUOTA_OPERATOR_VERSION}
+    provider:
+      name: openmcp-project
+    resources:
+      - name: quota-operator-image
+        type: ociImage
+        version: ${QUOTA_OPERATOR_VERSION}
+        access:
+          type: ociArtifact
+          imageReference: ghcr.io/openmcp-project/images/quota-operator:${QUOTA_OPERATOR_VERSION}
+      - name: quota-operator-chart
+        type: helmChart
+        version: ${QUOTA_OPERATOR_VERSION}
+        access:
+          type: ociArtifact
+          imageReference: ghcr.io/openmcp-project/charts/quota-operator:${QUOTA_OPERATOR_VERSION} 
+    sources:
+      - access:
+          commit: ${QUOTA_OPERATOR_VERSION}
+          type: gitHub
+          repoUrl: https://github.com/openmcp-project/quota-operator
+          ref: refs/heads/main
+        name: openmcp
+        type: git
+        version: ${QUOTA_OPERATOR_VERSION}
+
+
+  - name: github.com/openmcp-project/project-workspace-operator
+    version: ${PROJECT_WORKSPACE_OPERATOR_VERSION}
+    provider:
+      name: openmcp-project
+    resources:
+      - name: project-workspace-operator-image
+        type: ociImage
+        version: ${PROJECT_WORKSPACE_OPERATOR_VERSION}
+        access:
+          type: ociArtifact
+          imageReference: ghcr.io/openmcp-project/images/project-workspace-operator:${PROJECT_WORKSPACE_OPERATOR_VERSION}
+      - name: project-workspace-operator-chart
+        type: helmChart
+        version: ${PROJECT_WORKSPACE_OPERATOR_VERSION}
+        access:
+          type: ociArtifact
+          imageReference: ghcr.io/openmcp-project/charts/project-workspace-operator:${PROJECT_WORKSPACE_OPERATOR_VERSION}
+    sources:
+      - access:
+          commit: ${PROJECT_WORKSPACE_OPERATOR_VERSION}
+          type: gitHub
+          repoUrl: https://github.com/openmcp-project/project-workspace-operator
+          ref: refs/heads/main
+        name: openmcp
+        type: git
+        version: ${PROJECT_WORKSPACE_OPERATOR_VERSION}
+
