@@ -8,7 +8,9 @@ on:
       
 permissions:
   contents: write # we need this to be able to push tags
-
+env:
+  OCI_URL: ghcr.io/openmcp-project
+  
 jobs:
   release_tag:
     name: Release version
@@ -51,6 +53,7 @@ jobs:
           exit 0
       
       - name: Login to GitHub Container Registry
+        if: ${{ env.SKIP != 'true' }}
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
@@ -58,22 +61,27 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: setup OCM
+        if: ${{ env.SKIP != 'true' }}
         uses: open-component-model/ocm-setup-action@main
 
       - name: Create OCM CTF
+        if: ${{ env.SKIP != 'true' }}
         run: |
           ocm add componentversions --create \
           --file openmcp-ctf component-constructor.yaml \
           --settings components-versions.yaml  -- OPENMCP_VERSION=${{ env.version }}
 
       - name: Build Changelog
+        if: ${{ env.SKIP != 'true' }}
         id: constructed_release
         run: |
           cat hack/release-body.tpl > RELEASE_BODY.md
           echo "${{ github.event.pull_request.body }}" >> RELEASE_BODY.md
           echo -e "## Components:\n" >> RELEASE_BODY.md
           ./hack/generate_release_notes.sh openmcp-ctf >> RELEASE_BODY.md
-
+        env:
+          GH_TOKEN: ${{ github.token }}
+    
       - name: Create Git tag
         if: ${{ env.SKIP != 'true' }}
         run: |
@@ -104,5 +112,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Push CTF
+        if: ${{ env.SKIP != 'true' }}
         run: |
           ocm transfer ctf --overwrite ./openmcp-ctf/ ${{ env.OCI_URL }} 
