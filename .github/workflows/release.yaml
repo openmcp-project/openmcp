@@ -129,7 +129,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
-      # - name: Push CTF
-      #   if: ${{ env.SKIP != 'true' }}
-      #   run: |
-      #     ocm transfer ctf --overwrite ./openmcp-ctf/ ${{ env.OCI_URL }} 
+      - name: Push CTF
+        if: ${{ env.SKIP != 'true' }}
+        run: |
+          ocm transfer ctf --overwrite ./openmcp-ctf/ ${{ env.OCI_URL }} 
