@@ -2,6 +2,9 @@
 
 components:
   - name: github.com/openmcp-project/openmcp
+    labels:
+    - name: "org.opencontainers.image.source"
+      value: "https://github.com/openmcp-project/openmcp"
     version: "${OPENMCP_VERSION}"
     provider:
       name: openmcp-project

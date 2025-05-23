@@ -6,15 +6,16 @@ on:
     branches:
       - main
       
-permissions:
+permissions: 
   contents: write # we need this to be able to push tags
   pull-requests: read # we need this to be able to read pull-requests body
   issues: read # we need this to be able to read pull-requests body
   packages: write # we need this to be able to push ocm packages 
   attestations: write # we need this to be able to push ocm packages 
   id-token: write # we need this to be able to push ocm packages 
+
 env:
-  OCI_URL: ghcr.io/openmcp-project
+  OCI_URL: ghcr.io/openmcp-project/components
   
 jobs:
   release_tag:
@@ -135,4 +136,4 @@ jobs:
       - name: Push CTF
         if: ${{ env.SKIP != 'true' }}
         run: |
-          ocm transfer ctf --overwrite ./openmcp-ctf/ ${{ env.OCI_URL }} 
+          ocm transfer ctf ./openmcp-ctf/ ${{ env.OCI_URL }} 
