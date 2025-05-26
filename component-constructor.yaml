@@ -28,3 +28,11 @@ components:
       - componentName: github.com/openmcp-project/project-workspace-operator
         name: project-workspace-operator
         version: ${PROJECT_WORKSPACE_OPERATOR_VERSION}
+    sources:
+      - access:
+          ref: "refs/tags/${OPENMCP_VERSION}"
+          type: gitHub
+          repoUrl: https://github.com/openmcp-project/openmcp
+        name: openmcp
+        type: git
+        version: ${OPENMCP_VERSION}
