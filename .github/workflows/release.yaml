@@ -86,10 +86,10 @@ jobs:
           PR_NUMBER=$(gh pr list --search "$COMMIT_SHA" --state merged --json number --jq '.[0].number')
           if [ -z "$PR_NUMBER" ]; then
             echo "No PR found for commit $COMMIT_SHA, skipping."
-            echo "body=" >> $GITHUB_OUTPUT
+            echo "pr_body=" >> "$GITHUB_ENV"
             exit 0
           fi
-          gh pr view "$PR_NUMBER" --json body --jq .body
+          echo "pr_body=\"$(gh pr view "$PR_NUMBER" --json body --jq .body)\"" >> "$GITHUB_ENV"
         env:
           GITHUB_TOKEN: ${{ github.token }}
           
@@ -98,7 +98,7 @@ jobs:
         id: constructed_release
         run: |
           cat hack/release-body.tpl > RELEASE_BODY.md
-          echo "${{ steps.github_release.outputs.release_highlights }}" >> RELEASE_BODY.md
+          echo "${{ env.pr_body }}" >> RELEASE_BODY.md
           echo -e "## Components:\n" >> RELEASE_BODY.md
           ./hack/generate_release_notes.sh openmcp-ctf >> RELEASE_BODY.md
         env:
