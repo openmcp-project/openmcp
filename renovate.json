@@ -13,7 +13,7 @@
             "description": "All component dependencies and their versions used in the openMCP project.",
             "customType": "regex",
             "managerFilePatterns": [
-                "/component-versions\\.yaml/"
+                "/components-versions\\.yaml/"
             ],
             "matchStrings": [
                 "# renovate: datasource=(?<datasource>[a-z-.]+?) depName=(?<depName>[^\\s]+?)(?: (lookupName|packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\s.+?_version=\"?(?<currentValue>.+?)\"?\\s"
