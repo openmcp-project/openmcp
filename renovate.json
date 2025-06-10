@@ -1,0 +1,24 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "minimumReleaseAge": "3 days",
+    "extends": [
+      "config:recommended",
+      "config:best-practices",
+      "security:openssf-scorecard",
+      "helpers:pinGitHubActionDigests",
+      ":rebaseStalePrs"
+    ],
+    "customManagers": [
+        {
+            "description": "All component dependencies and their versions used in the openMCP project.",
+            "customType": "regex",
+            "managerFilePatterns": [
+                "/component-versions\\.yaml/"
+            ],
+            "matchStrings": [
+                "# renovate: datasource=(?<datasource>[a-z-.]+?) depName=(?<depName>[^\\s]+?)(?: (lookupName|packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\s.+?_version=\"?(?<currentValue>.+?)\"?\\s"
+            ]
+        }
+    ]
+  }
+  
