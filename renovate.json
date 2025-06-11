@@ -2,11 +2,25 @@
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "minimumReleaseAge": "3 days",
     "extends": [
-      "config:recommended",
-      "config:best-practices",
-      "security:openssf-scorecard",
-      "helpers:pinGitHubActionDigests",
-      ":rebaseStalePrs"
+        "config:recommended",
+        "config:best-practices",
+        "security:openssf-scorecard",
+        "helpers:pinGitHubActionDigests",
+        ":rebaseStalePrs"
+    ],
+    "packageRules": [
+        {
+            "matchManagers": [
+                "custom.regex"
+            ],
+            "groupName": "All openMCP Project Updates",
+            "groupSlug": "all-openmcp-updates",
+            "minimumReleaseAge": "0 days",
+            "rebaseWhen": "auto",
+            "automerge": true,
+            "automergeType": "pr-comment",
+            "automergeComment": "automerge all openMCP  project dependencies updates"
+        }
     ],
     "customManagers": [
         {
@@ -20,5 +34,4 @@
             ]
         }
     ]
-  }
-  
+}
