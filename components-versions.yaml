@@ -1,10 +1,10 @@
 # renovate: datasource=github-releases depName=openmcp-project/control-plane-operator
 CONTROL_PLANE_OPERATOR_VERSION: "v0.1.10"
 # renovate: datasource=github-releases depName=openmcp-project/quota-operator
-QUOTA_OPERATOR_VERSION: "v0.6.0"
+QUOTA_OPERATOR_VERSION: "v0.6.1"
 # renovate: datasource=github-releases depName=openmcp-project/project-workspace-operator
-PROJECT_WORKSPACE_OPERATOR_VERSION: "v0.13.0"
+PROJECT_WORKSPACE_OPERATOR_VERSION: "v0.13.1"
 # renovate: datasource=github-releases depName=openmcp-project/mcp-operator
-MCP_OPERATOR_VERSION: "v0.30.0"
+MCP_OPERATOR_VERSION: "v0.30.1"
 # renovate: datasource=github-releases depName=openmcp-project/openmcp-operator
-OPENMCP_OPERATOR_VERSION: "v0.8.1"
+OPENMCP_OPERATOR_VERSION: "v0.8.2"
