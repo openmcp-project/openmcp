@@ -14,5 +14,5 @@ echo "$references" | while read -r name repo version; do
     gh release view "$version" --repo "$repo" --json tagName,body,url \
     | jq '. + {"componentName": env.REPO}' \
     | jq -r -f ./hack/component.tpl \
-    | sed "s/^##\ /#### /g" # improve formatting until upstream formatting is fixed.
+    | sed "s/^#\ /## /g" | sed "s/^##\ C/###\ C/g" # improve formatting until upstream formatting is fixed.
 done

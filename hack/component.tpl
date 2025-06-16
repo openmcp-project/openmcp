@@ -1,4 +1,4 @@
-"### \(.componentName) [[\(.tagName)](\(.url))]:
+"## \(.componentName) [[\(.tagName)](\(.url))]:
 
-\(.body)"
-
+\(.body)
+---"
