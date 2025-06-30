@@ -28,6 +28,10 @@ components:
       - componentName: github.com/openmcp-project/project-workspace-operator
         name: project-workspace-operator
         version: ${PROJECT_WORKSPACE_OPERATOR_VERSION}
+
+      - componentName: github.com/openmcp-project/service-provider-landscaper
+        name: service-provider-landscaper
+        version: ${SERVICE_PROVIDER_LANDSCAPER_VERSION}
     sources:
       - access:
           ref: "refs/tags/${OPENMCP_VERSION}"
