@@ -5,7 +5,7 @@
 ## About this project
 
 This repository contains the umbrella openMCP component, which is a collection of openMCP open-source components which can be deployed together to create an openMCP landscape.
-The component is build with the [Open Component Model (OCM)](https://ocm.software). This component does not contain any resource definitions, but only references to other components.
+The component is built with the [Open Component Model (OCM)](https://ocm.software). This component does not contain any resource definitions, but only references to other components.
 The referenced components are defined in the file `component-constructor.yaml` in the root directory of this repository.
 The versions of the referenced components are defined in the file `component-versions.yaml` in the root directory of this repository.
 
