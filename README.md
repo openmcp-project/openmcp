@@ -4,11 +4,20 @@
 
 ## About this project
 
-Open Managed Control Planes
+This repository contains the umbrella openMCP component, which is a collection of openMCP open-source components which can be deployed together to create an openMCP landscape.
+The component is built with the [Open Component Model (OCM)](https://ocm.software). This component does not contain any resource definitions, but only references to other components.
+The referenced components are defined in the file `component-constructor.yaml` in the root directory of this repository.
+The versions of the referenced components are defined in the file `component-versions.yaml` in the root directory of this repository.
 
 ## Requirements and Setup
 
-*Insert a short description what is required to get your project running...*
+For accessing the openMCP component, the OCM CLI is required. The OCM CLI can be installed via the [OCM CLI documentation](https://ocm.software/docs/getting-started/installation/).
+To view a specific version of the openMCP component inclusive all dependencies, use the following command:
+
+```bash
+OPENMCP_VERSION=v0.0.7
+ocm get component --repo=OCIRegistry::ghcr.io/openmcp-project/components github.com/openmcp-project/openmcp:${OPENMCP_VERSION} -o yaml --recursive
+```
 
 ## Support, Feedback, Contributing
 
