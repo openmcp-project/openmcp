@@ -1,4 +1,4 @@
-[![REUSE status](https://api.reuse.software/badge/github.com/openmcp-project/openmcp-project-openmcp)](https://api.reuse.software/info/github.com/openmcp-project/openmcp-project-openmcp)
+[![REUSE status](https://api.reuse.software/badge/github.com/openmcp-project/openmcp)](https://api.reuse.software/info/github.com/openmcp-project/openmcp)
 
 # openmcp-project/openmcp
 
