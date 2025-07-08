@@ -1,3 +1,1 @@
-# MCP Landscape
-
-## Highlights
+# openMCP
