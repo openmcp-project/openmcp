@@ -32,6 +32,10 @@ components:
       - componentName: github.com/openmcp-project/service-provider-landscaper
         name: service-provider-landscaper
         version: ${SERVICE_PROVIDER_LANDSCAPER_VERSION}
+
+      - componentName: github.com/openmcp-project/cluster-provider-gardener
+        name: cluster-provider-landscaper
+        version: ${CLUSTER_PROVIDER_GARDENER_VERSION}
     sources:
       - access:
           ref: "refs/tags/${OPENMCP_VERSION}"
