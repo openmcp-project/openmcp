@@ -36,6 +36,32 @@ components:
       - componentName: github.com/openmcp-project/cluster-provider-gardener
         name: cluster-provider-gardener
         version: ${CLUSTER_PROVIDER_GARDENER_VERSION}
+
+    resources:
+      - name: fluxcd-source-controller
+        version: ${FLUXCD_SOURCE_CONTROLLER_VERSION}
+        type: ociImage
+        input:
+          type: ociImage
+          path: ghcr.io/fluxcd/source-controller:${FLUXCD_SOURCE_CONTROLLER_VERSION}
+          repository: images/fluxcd/source-controller
+
+      - name: fluxcd-kustomize-controller
+        version: ${FLUXCD_KUSTOMIZE_CONTROLLER_VERSION}
+        type: ociImage
+        input:
+          type: ociImage
+          path: ghcr.io/fluxcd/kustomize-controller:${FLUXCD_KUSTOMIZE_CONTROLLER_VERSION}
+          repository: images/fluxcd/kustomize-controller
+
+      - name: fluxcd-helm-controller
+        version: ${FLUXCD_HELM_CONTROLLER_VERSION}
+        type: ociImage
+        input:
+          type: ociImage
+          path: ghcr.io/fluxcd/helm-controller:${FLUXCD_HELM_CONTROLLER_VERSION}
+          repository: images/fluxcd/helm-controller
+
     sources:
       - access:
           ref: "refs/tags/${OPENMCP_VERSION}"
