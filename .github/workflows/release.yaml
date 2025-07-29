@@ -118,4 +118,4 @@ jobs:
       - name: Push CTF
         if: ${{ env.SKIP != 'true' }}
         run: |
-          ocm transfer ctf ./openmcp-ctf/ ${{ env.OCI_URL }} 
+          ocm transfer ctf --copy-resources ./openmcp-ctf/ ${{ env.OCI_URL }} 
