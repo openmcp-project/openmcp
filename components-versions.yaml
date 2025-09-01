@@ -7,7 +7,7 @@ PROJECT_WORKSPACE_OPERATOR_VERSION: "v0.14.0"
 # renovate: datasource=github-releases depName=openmcp-project/mcp-operator
 MCP_OPERATOR_VERSION: "v0.32.0"
 # renovate: datasource=github-releases depName=openmcp-project/openmcp-operator
-OPENMCP_OPERATOR_VERSION: "v0.9.1"
+OPENMCP_OPERATOR_VERSION: "v0.11.1"
 # renovate: datasource=github-releases depName=openmcp-project/service-provider-landscaper
 SERVICE_PROVIDER_LANDSCAPER_VERSION: "v0.4.0"
 # renovate: datasource=github-releases depName=openmcp-project/cluster-provider-gardener
