@@ -17,6 +17,10 @@ components:
         name: openmcp-operator
         version: ${OPENMCP_OPERATOR_VERSION}
 
+      - componentName: github.com/openmcp-project/gitops-templates
+        name: gitops-templates
+        version: ${GITOPS_TEMPLATES_VERSION}
+
       - componentName: github.com/openmcp-project/control-plane-operator
         name: control-plane-operator
         version: ${CONTROL_PLANE_OPERATOR_VERSION}
