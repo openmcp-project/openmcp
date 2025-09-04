@@ -15,7 +15,7 @@ CLUSTER_PROVIDER_GARDENER_VERSION: "v0.5.0"
 
 # gitops templates for deployment
 # renovate: datasource=github-releases depName=openmcp-project/gitops-templates
-GITOPS_TEMPLATES_VERSION: "v0.0.4"
+GITOPS_TEMPLATES_VERSION: "v0.0.5"
 
 # external dependencies
 # github.com/fluxcd
