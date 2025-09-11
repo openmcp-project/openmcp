@@ -74,6 +74,30 @@ components:
           path: ghcr.io/fluxcd/helm-controller:${FLUXCD_HELM_CONTROLLER_VERSION}
           repository: images/fluxcd/helm-controller
 
+      - name: fluxcd-notification-controller
+        version: ${FLUXCD_NOTIFICATION_CONTROLLER_VERSION}
+        type: ociImage
+        input:
+          type: ociImage
+          path: ghcr.io/fluxcd/notification-controller:${FLUXCD_NOTIFICATION_CONTROLLER_VERSION}
+          repository: images/fluxcd/notification-controller
+
+      - name: fluxcd-image-reflector-controller
+        version: ${FLUXCD_IMAGE_REFLECTOR_CONTROLLER_VERSION}
+        type: ociImage
+        input:
+          type: ociImage
+          path: ghcr.io/fluxcd/image-reflector-controller:${FLUXCD_IMAGE_REFLECTOR_CONTROLLER_VERSION}
+          repository: images/fluxcd/image-reflector-controller
+
+      - name: fluxcd-image-automation-controller
+        version: ${FLUXCD_IMAGE_AUTOMATION_CONTROLLER_VERSION}
+        type: ociImage
+        input:
+          type: ociImage
+          path: ghcr.io/fluxcd/image-automation-controller:${FLUXCD_IMAGE_AUTOMATION_CONTROLLER_VERSION}
+          repository: images/fluxcd/image-automation-controller
+
     sources:
       - access:
           ref: "refs/tags/${OPENMCP_VERSION}"
