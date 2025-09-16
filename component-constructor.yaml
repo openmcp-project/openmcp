@@ -49,6 +49,10 @@ components:
         name: cluster-provider-kind
         version: ${CLUSTER_PROVIDER_KIND_VERSION}
 
+      - componentName: github.com/openmcp-project/bootstrapper
+        name: bootstrapper
+        version: ${BOOTSTRAPPER_VERSION}
+
     resources:
       - name: fluxcd-source-controller
         version: ${FLUXCD_SOURCE_CONTROLLER_VERSION}
