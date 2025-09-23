@@ -5,7 +5,7 @@ QUOTA_OPERATOR_VERSION: "v0.12.0"
 # renovate: datasource=github-releases depName=openmcp-project/project-workspace-operator
 PROJECT_WORKSPACE_OPERATOR_VERSION: "v0.17.0"
 # renovate: datasource=github-releases depName=openmcp-project/mcp-operator
-MCP_OPERATOR_VERSION: "v0.39.0"
+MCP_OPERATOR_VERSION: "v0.40.0"
 # renovate: datasource=github-releases depName=openmcp-project/openmcp-operator
 OPENMCP_OPERATOR_VERSION: "v0.14.0"
 # renovate: datasource=github-releases depName=openmcp-project/service-provider-landscaper
