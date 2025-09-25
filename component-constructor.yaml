@@ -54,6 +54,22 @@ components:
         version: ${BOOTSTRAPPER_VERSION}
 
     resources:
+      - name: external-dns-chart
+        version: ${EXTERNAL_DNS_VERSION}
+        type: helmChart
+        access:
+          type: helm
+          helmChart: external-dns:${EXTERNAL_DNS_VERSION}
+          helmRepository: https://kubernetes-sigs.github.io/external-dns
+      
+      - name: external-dns-image
+        version: ${EXTERNAL_DNS_VERSION}
+        type: ociImage
+        input:
+          type: ociImage
+          path: registry.k8s.io/external-dns/external-dns:${EXTERNAL_DNS_VERSION}
+          repository: images/external-dns
+
       - name: fluxcd-source-controller
         version: ${FLUXCD_SOURCE_CONTROLLER_VERSION}
         type: ociImage
