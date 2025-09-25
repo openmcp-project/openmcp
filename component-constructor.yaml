@@ -55,12 +55,13 @@ components:
 
     resources:
       - name: external-dns-chart
-        version: ${EXTERNAL_DNS_VERSION}
         type: helmChart
-        access:
+        input:
           type: helm
-          helmChart: external-dns:${EXTERNAL_DNS_VERSION}
           helmRepository: https://kubernetes-sigs.github.io/external-dns
+          path: external-dns
+          version: 1${EXTERNAL_DNS_VERSION#v0}
+          repository: charts/external-dns
       
       - name: external-dns-image
         version: ${EXTERNAL_DNS_VERSION}
