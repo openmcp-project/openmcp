@@ -17,7 +17,7 @@ CLUSTER_PROVIDER_GARDENER_VERSION: "v0.8.0"
 # renovate: datasource=github-releases depName=openmcp-project/cluster-provider-kind
 CLUSTER_PROVIDER_KIND_VERSION: "v0.0.15"
 # renovate: datasource=github-releases depName=openmcp-project/bootstrapper
-BOOTSTRAPPER_VERSION: "v0.1.1"
+BOOTSTRAPPER_VERSION: "v0.2.0"
 
 
 # gitops templates for deployment
