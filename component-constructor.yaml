@@ -33,6 +33,12 @@ components:
         name: project-workspace-operator
         version: ${PROJECT_WORKSPACE_OPERATOR_VERSION}
 
+      - componentName: github.com/openmcp-project/bootstrapper
+        name: bootstrapper
+        version: ${BOOTSTRAPPER_VERSION}
+
+      # Service Providers
+
       - componentName: github.com/openmcp-project/service-provider-landscaper
         name: service-provider-landscaper
         version: ${SERVICE_PROVIDER_LANDSCAPER_VERSION}
@@ -40,6 +46,8 @@ components:
       - componentName: github.com/openmcp-project/service-provider-crossplane
         name: service-provider-crossplane
         version: ${SERVICE_PROVIDER_CROSSPLANE_VERSION}
+
+      # Cluster Providers
 
       - componentName: github.com/openmcp-project/cluster-provider-gardener
         name: cluster-provider-gardener
@@ -49,9 +57,11 @@ components:
         name: cluster-provider-kind
         version: ${CLUSTER_PROVIDER_KIND_VERSION}
 
-      - componentName: github.com/openmcp-project/bootstrapper
-        name: bootstrapper
-        version: ${BOOTSTRAPPER_VERSION}
+      # Platform Services
+
+      - componentName: github.com/openmcp-project/platform-service-dns
+        name: platform-service-dns
+        version: ${PLATFORM_SERVICE_DNS_VERSION}
 
     resources:
       - name: external-dns-chart
