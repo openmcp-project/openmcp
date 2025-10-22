@@ -26,7 +26,7 @@ CLUSTER_PROVIDER_KIND_VERSION: "v0.0.15"
 PLATFORM_SERVICE_DNS_VERSION: "v0.0.2"
 
 # renovate: datasource=github-releases depName=openmcp-project/bootstrapper
-BOOTSTRAPPER_VERSION: "v0.3.0"
+BOOTSTRAPPER_VERSION: "v0.4.0"
 
 
 # gitops templates for deployment
