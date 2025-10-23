@@ -134,7 +134,7 @@ components:
         input:
           type: helm
           helmRepository: https://charts.external-secrets.io
-          path: /
+          path: external-secrets
           version: ${EXTERNAL_SECRETS_OPERATOR_VERSION}
           repository: charts/external-secrets-operator
 
