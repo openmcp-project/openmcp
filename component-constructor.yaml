@@ -129,6 +129,23 @@ components:
           path: ghcr.io/fluxcd/image-automation-controller:${FLUXCD_IMAGE_AUTOMATION_CONTROLLER_VERSION}
           repository: images/fluxcd/image-automation-controller
 
+      - name: external-secrets-operator-chart
+        type: helmChart
+        input:
+          type: helm
+          helmRepository: https://charts.external-secrets.io
+          path: /
+          version: ${EXTERNAL_SECRETS_OPERATOR_VERSION}
+          repository: charts/external-secrets-operator
+
+      - name: external-secrets-operator-image
+        version: ${EXTERNAL_SECRETS_OPERATOR_VERSION}
+        type: ociImage
+        input:
+          type: ociImage
+          path: ghcr.io/external-secrets/external-secrets:${EXTERNAL_SECRETS_OPERATOR_VERSION}
+          repository: images/external-secrets-operator
+
     sources:
       - access:
           ref: "refs/tags/${OPENMCP_VERSION}"
