@@ -62,5 +62,5 @@ ENVOY_GATEWAY_CHART_VERSION: "v1.5.4"
 ENVOY_PROXY_IMAGE_VERSION: "v1.36.2"
 # renovate: datasource=github-releases depName=envoyproxy/gateway
 ENVOY_GATEWAY_IMAGE_VERSION: "v1.5.4"
-# renovate: datasource=git-refs packageName=https://github.com/envoyproxy/ratelimit.git
+# renovate: datasource=git-refs depName=envoyproxy/ratelimit packageName=https://github.com/envoyproxy/ratelimit.git
 ENVOY_RATELIMIT_IMAGE_VERSION: "99d85510"
