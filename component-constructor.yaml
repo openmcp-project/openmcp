@@ -146,6 +146,38 @@ components:
           path: ghcr.io/external-secrets/external-secrets:${EXTERNAL_SECRETS_OPERATOR_VERSION}
           repository: images/external-secrets-operator
 
+      - name: envoy-chart
+        version: ${ENVOY_GATEWAY_CHART_VERSION}
+        type: helmChart
+        input:
+          type: ociImage
+          path: docker.io/envoyproxy/gateway-helm:${ENVOY_GATEWAY_CHART_VERSION#v}
+          repository: charts/envoy-gateway
+
+      - name: envoy-proxy-image
+        version: ${ENVOY_PROXY_IMAGE_VERSION}
+        type: ociImage
+        input:
+          type: ociImage
+          path: docker.io/envoyproxy/envoy:distroless-${ENVOY_PROXY_IMAGE_VERSION}
+          repository: images/envoy-proxy
+
+      - name: envoy-gateway-image
+        version: ${ENVOY_GATEWAY_IMAGE_VERSION}
+        type: ociImage
+        input:
+          type: ociImage
+          path: docker.io/envoyproxy/gateway:${ENVOY_GATEWAY_IMAGE_VERSION}
+          repository: images/envoy-gateway
+
+      - name: envoy-ratelimit-image
+        version: v0.0.0-latest
+        type: ociImage
+        input:
+          type: ociImage
+          path: docker.io/envoyproxy/ratelimit:${ENVOY_RATELIMIT_IMAGE_VERSION}
+          repository: images/envoy-ratelimit
+
     sources:
       - access:
           ref: "refs/tags/${OPENMCP_VERSION}"
