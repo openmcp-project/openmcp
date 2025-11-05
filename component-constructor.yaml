@@ -63,6 +63,10 @@ components:
         name: platform-service-dns
         version: ${PLATFORM_SERVICE_DNS_VERSION}
 
+      - componentName: github.com/openmcp-project/platform-service-gateway
+        name: platform-service-gateway
+        version: ${PLATFORM_SERVICE_GATEWAY_VERSION}
+
     resources:
       - name: external-dns-chart
         type: helmChart
