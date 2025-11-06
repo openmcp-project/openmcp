@@ -28,7 +28,7 @@ PLATFORM_SERVICE_DNS_VERSION: "v0.0.4"
 PLATFORM_SERVICE_GATEWAY_VERSION: "v0.0.1"
 
 # renovate: datasource=github-releases depName=openmcp-project/bootstrapper
-BOOTSTRAPPER_VERSION: "v0.6.1"
+BOOTSTRAPPER_VERSION: "v0.7.0"
 
 
 # gitops templates for deployment
