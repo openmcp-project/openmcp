@@ -54,7 +54,7 @@ FLUXCD_NOTIFICATION_CONTROLLER_VERSION: "v1.7.5"
 # renovate: datasource=github-releases depName=fluxcd/image-reflector-controller
 FLUXCD_IMAGE_REFLECTOR_CONTROLLER_VERSION: "v1.0.4"
 # renovate: datasource=github-releases depName=fluxcd/image-automation-controller
-FLUXCD_IMAGE_AUTOMATION_CONTROLLER_VERSION: "v1.0.3"
+FLUXCD_IMAGE_AUTOMATION_CONTROLLER_VERSION: "v1.0.4"
 
 # renovate: datasource=github-releases depName=external-secrets/external-secrets
 EXTERNAL_SECRETS_OPERATOR_VERSION: "v1.0.0"
