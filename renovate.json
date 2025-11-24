@@ -35,6 +35,15 @@
       "rebaseWhen": "auto",
       "minimumReleaseAge": "0 days",
       "enabled": true
+    },
+    {
+      "description": "Combine fluxcd updates in a single PR",
+      "matchDatasources": [
+        "go"
+      ],
+      "matchPackageNames": [
+        "/^github\\.com/fluxcd/"
+      ]
     }
   ],
     "customManagers": [
