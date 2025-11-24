@@ -44,7 +44,7 @@ GITOPS_TEMPLATES_VERSION: "v0.1.0"
 EXTERNAL_DNS_VERSION: "v0.20.0"
 
 # renovate: datasource=github-releases depName=fluxcd/source-controller
-FLUXCD_SOURCE_CONTROLLER_VERSION: "v1.7.3"
+FLUXCD_SOURCE_CONTROLLER_VERSION: "v1.7.4"
 # renovate: datasource=github-releases depName=fluxcd/kustomize-controller
 FLUXCD_KUSTOMIZE_CONTROLLER_VERSION: "v1.7.3"
 # renovate: datasource=github-releases depName=fluxcd/helm-controller
