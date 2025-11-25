@@ -41,7 +41,7 @@ GITOPS_TEMPLATES_VERSION: "v0.1.0"
 # github.com/fluxcd
 
 # renovate: datasource=github-releases depName=kubernetes-sigs/external-dns
-EXTERNAL_DNS_VERSION: "v0.20.0"
+EXTERNAL_DNS_VERSION: "v0.19.0"
 
 # renovate: datasource=github-releases depName=fluxcd/source-controller
 FLUXCD_SOURCE_CONTROLLER_VERSION: "v1.7.4"
