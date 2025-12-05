@@ -71,6 +71,10 @@ components:
         name: platform-service-project-workspace
         version: ${PLATFORM_SERVICE_PROJECT_WORKSPACE_VERSION}
 
+      - componentName: github.com/openmcp-project/usage-operator
+        name: platform-service-usage
+        version: ${PLATFORM_SERVICE_USAGE_VERSION}
+
     resources:
       - name: external-dns-chart
         type: helmChart
