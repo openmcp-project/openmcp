@@ -65,7 +65,7 @@ EXTERNAL_SECRETS_OPERATOR_VERSION: "v1.1.1"
 # renovate: datasource=github-releases depName=envoyproxy/gateway
 ENVOY_GATEWAY_CHART_VERSION: "v1.6.1"
 # renovate: datasource=github-releases depName=envoyproxy/envoy
-ENVOY_PROXY_IMAGE_VERSION: "v1.36.3"
+ENVOY_PROXY_IMAGE_VERSION: "v1.36.4"
 # renovate: datasource=github-releases depName=envoyproxy/gateway
 ENVOY_GATEWAY_IMAGE_VERSION: "v1.6.1"
 # renovate: datasource=git-refs depName=envoyproxy/ratelimit packageName=https://github.com/envoyproxy/ratelimit.git
