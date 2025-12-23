@@ -37,7 +37,7 @@ BOOTSTRAPPER_VERSION: "v0.10.0"
 
 # gitops templates for deployment
 # renovate: datasource=github-releases depName=openmcp-project/gitops-templates
-GITOPS_TEMPLATES_VERSION: "v0.1.3"
+GITOPS_TEMPLATES_VERSION: "v0.1.4"
 
 # external dependencies
 # github.com/fluxcd
