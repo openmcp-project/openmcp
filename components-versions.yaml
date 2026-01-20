@@ -32,7 +32,7 @@ PLATFORM_SERVICE_PROJECT_WORKSPACE_VERSION: "v1.2.0"
 PLATFORM_SERVICE_USAGE_VERSION: "v0.0.16"
 
 # renovate: datasource=github-releases depName=openmcp-project/bootstrapper
-BOOTSTRAPPER_VERSION: "v0.11.0"
+BOOTSTRAPPER_VERSION: "v0.11.1"
 
 
 # gitops templates for deployment
