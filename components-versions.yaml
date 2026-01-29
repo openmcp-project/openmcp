@@ -19,7 +19,7 @@ SERVICE_PROVIDER_CROSSPLANE_VERSION: "v0.1.5"
 # renovate: datasource=github-releases depName=openmcp-project/cluster-provider-gardener
 CLUSTER_PROVIDER_GARDENER_VERSION: "v0.9.1"
 # renovate: datasource=github-releases depName=openmcp-project/cluster-provider-kind
-CLUSTER_PROVIDER_KIND_VERSION: "v0.0.15"
+CLUSTER_PROVIDER_KIND_VERSION: "v0.1.0"
 
 # Platform Services
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-dns
