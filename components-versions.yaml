@@ -25,7 +25,7 @@ CLUSTER_PROVIDER_KIND_VERSION: "v0.1.0"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-dns
 PLATFORM_SERVICE_DNS_VERSION: "v0.0.5"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-gateway
-PLATFORM_SERVICE_GATEWAY_VERSION: "v0.0.4"
+PLATFORM_SERVICE_GATEWAY_VERSION: "v0.0.6"
 # renovate: datasource=github-releases depName=openmcp-project/project-workspace-operator
 PLATFORM_SERVICE_PROJECT_WORKSPACE_VERSION: "v1.2.0"
 # renovate: datasource=github-releases depName=openmcp-project/usage-operator
