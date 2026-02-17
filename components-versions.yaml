@@ -52,7 +52,7 @@ FLUXCD_KUSTOMIZE_CONTROLLER_VERSION: "v1.7.3"
 # renovate: datasource=github-releases depName=fluxcd/helm-controller
 FLUXCD_HELM_CONTROLLER_VERSION: "v1.4.5"
 # renovate: datasource=github-releases depName=fluxcd/notification-controller
-FLUXCD_NOTIFICATION_CONTROLLER_VERSION: "v1.7.5"
+FLUXCD_NOTIFICATION_CONTROLLER_VERSION: "v1.8.0"
 # renovate: datasource=github-releases depName=fluxcd/image-reflector-controller
 FLUXCD_IMAGE_REFLECTOR_CONTROLLER_VERSION: "v1.0.4"
 # renovate: datasource=github-releases depName=fluxcd/image-automation-controller
