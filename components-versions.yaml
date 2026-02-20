@@ -59,7 +59,7 @@ FLUXCD_IMAGE_REFLECTOR_CONTROLLER_VERSION: "v1.1.0"
 FLUXCD_IMAGE_AUTOMATION_CONTROLLER_VERSION: "v1.1.0"
 
 # renovate: datasource=github-releases depName=external-secrets/external-secrets
-EXTERNAL_SECRETS_OPERATOR_VERSION: "v1.3.2"
+EXTERNAL_SECRETS_OPERATOR_VERSION: "v2.0.1"
 
 # envoy
 # renovate: datasource=github-releases depName=envoyproxy/gateway
