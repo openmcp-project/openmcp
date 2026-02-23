@@ -3,7 +3,7 @@ CONTROL_PLANE_OPERATOR_VERSION: "v0.1.19"
 # renovate: datasource=github-releases depName=openmcp-project/quota-operator
 QUOTA_OPERATOR_VERSION: "v0.16.0"
 # renovate: datasource=github-releases depName=openmcp-project/project-workspace-operator
-PROJECT_WORKSPACE_OPERATOR_VERSION: "v1.2.0"
+PROJECT_WORKSPACE_OPERATOR_VERSION: "v1.3.0"
 # renovate: datasource=github-releases depName=openmcp-project/mcp-operator
 MCP_OPERATOR_VERSION: "v0.52.0"
 # renovate: datasource=github-releases depName=openmcp-project/openmcp-operator
@@ -27,7 +27,7 @@ PLATFORM_SERVICE_DNS_VERSION: "v0.0.5"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-gateway
 PLATFORM_SERVICE_GATEWAY_VERSION: "v0.0.6"
 # renovate: datasource=github-releases depName=openmcp-project/project-workspace-operator
-PLATFORM_SERVICE_PROJECT_WORKSPACE_VERSION: "v1.2.0"
+PLATFORM_SERVICE_PROJECT_WORKSPACE_VERSION: "v1.3.0"
 # renovate: datasource=github-releases depName=openmcp-project/usage-operator
 PLATFORM_SERVICE_USAGE_VERSION: "v0.0.16"
 
