@@ -75,6 +75,10 @@ components:
         name: platform-service-usage
         version: ${PLATFORM_SERVICE_USAGE_VERSION}
 
+      - componentName: github.com/openmcp-project/platform-service-test-runner
+        name: platform-service-test-runner
+        version: ${PLATFORM_SERVICE_TEST_RUNNER}
+
     resources:
       - name: external-dns-chart
         type: helmChart
