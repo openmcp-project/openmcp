@@ -47,6 +47,10 @@ components:
         name: service-provider-crossplane
         version: ${SERVICE_PROVIDER_CROSSPLANE_VERSION}
 
+      - componentName: github.com/openmcp-project/service-provider-flux
+        name: service-provider-flux
+        version: ${SERVICE_PROVIDER_FLUX_VERSION}
+
       # Cluster Providers
 
       - componentName: github.com/openmcp-project/cluster-provider-gardener
