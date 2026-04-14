@@ -18,6 +18,8 @@ SERVICE_PROVIDER_CROSSPLANE_VERSION: "v0.4.0"
 SERVICE_PROVIDER_EXTERNAL_SECRETS_VERSION: "v0.1.1"
 # renovate: datasource=github-releases depName=openmcp-project/service-provider-flux
 SERVICE_PROVIDER_FLUX_VERSION: "v0.1.2"
+# renovate: datasource=github-releases depName=openmcp-project/service-provider-ocm
+SERVICE_PROVIDER_OCM_VERSION: "v0.1.0"
 
 # Cluster Providers
 # renovate: datasource=github-releases depName=openmcp-project/cluster-provider-gardener
