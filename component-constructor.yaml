@@ -55,6 +55,10 @@ components:
         name: service-provider-flux
         version: ${SERVICE_PROVIDER_FLUX_VERSION}
 
+      - componentName: github.com/open-component-model/service-provider-ocm
+        name: service-provider-ocm
+        version: ${SERVICE_PROVIDER_OCM_VERSION}
+
       # Cluster Providers
 
       - componentName: github.com/openmcp-project/cluster-provider-gardener
