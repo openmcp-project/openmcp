@@ -25,9 +25,9 @@ components:
         name: control-plane-operator
         version: ${CONTROL_PLANE_OPERATOR_VERSION}
 
-      - componentName: github.com/openmcp-project/quota-operator
-        name: quota-operator
-        version: ${QUOTA_OPERATOR_VERSION}
+      - componentName: github.com/openmcp-project/platform-service-quota
+        name: platform-service-quota
+        version: ${PLATFORM_SERVICE_QUOTA_VERSION}
 
       - componentName: github.com/openmcp-project/platform-service-project-workspace
         name: platform-service-project-workspace
