@@ -33,7 +33,7 @@ PLATFORM_SERVICE_GATEWAY_VERSION: "v0.0.10"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-quota
 PLATFORM_SERVICE_QUOTA_VERSION: "v1.0.0"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-test-runner
-PLATFORM_SERVICE_TEST_RUNNER: "v0.0.1"
+PLATFORM_SERVICE_TEST_RUNNER: "v0.0.3"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-project-workspace
 PLATFORM_SERVICE_PROJECT_WORKSPACE_VERSION: "v2.0.1"
 # renovate: datasource=github-releases depName=openmcp-project/usage-operator
