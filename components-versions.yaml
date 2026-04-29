@@ -17,7 +17,7 @@ SERVICE_PROVIDER_FLUX_VERSION: "v0.1.2"
 # renovate: datasource=github-releases depName=openmcp-project/service-provider-velero
 SERVICE_PROVIDER_VELERO_VERSION: "v0.1.5"
 # renovate: datasource=github-releases depName=open-component-model/service-provider-ocm
-SERVICE_PROVIDER_OCM_VERSION: "v0.1.0"
+SERVICE_PROVIDER_OCM_VERSION: "v0.1.1"
 
 # Cluster Providers
 # renovate: datasource=github-releases depName=openmcp-project/cluster-provider-gardener
