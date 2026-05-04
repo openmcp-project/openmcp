@@ -49,5 +49,5 @@ Copyright OpenControlPlane contributors. Please see our [LICENSE](LICENSE) for c
 </p>
 
 <p align="center">
-  Copyright &copy; Linux Foundation Europe. OpenControlPlane is a project of <a href="https://neonephos.org/">NeoNephos Foundation</a>. For applicable policies including privacy policy, terms of use and trademark usage guidelines, please see <a href="https://linuxfoundation.eu">linuxfoundation.eu</a>. Linux is a registered trademark of Linus Torvalds.
+  Copyright Linux Foundation Europe. For web site terms of use, trademark policy and other project policies please see <a href="https://linuxfoundation.eu/en/policies">https://linuxfoundation.eu/en/policies</a>.
 </p>
