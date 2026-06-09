@@ -43,6 +43,10 @@ PLATFORM_SERVICE_PROJECT_WORKSPACE_VERSION: "v2.0.1"
 # renovate: datasource=github-releases depName=openmcp-project/usage-operator
 PLATFORM_SERVICE_USAGE_VERSION: "v0.0.16"
 
+# observability-stack
+# renovate: datasource=github-releases depName=openmcp-project/observability-stack
+OBSERVABILITY_STACK_VERSION: "v0.0.13"
+
 # renovate: datasource=github-releases depName=openmcp-project/bootstrapper
 BOOTSTRAPPER_VERSION: "v0.16.0"
 

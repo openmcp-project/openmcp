@@ -12,7 +12,7 @@ components:
       - componentName: github.com/openmcp-project/mcp-operator
         name: mcp-operator
         version: ${MCP_OPERATOR_VERSION}
-      
+
       - componentName: github.com/openmcp-project/openmcp-operator
         name: openmcp-operator
         version: ${OPENMCP_OPERATOR_VERSION}
@@ -99,6 +99,11 @@ components:
         name: platform-service-usage
         version: ${PLATFORM_SERVICE_USAGE_VERSION}
 
+      # observability-stack
+      - componentName: github.com/openmcp-project/observability-stack
+        name: observability-stack
+        version: ${OBSERVABILITY_STACK_VERSION}
+
     resources:
       - name: external-dns-chart
         type: helmChart
@@ -108,7 +113,7 @@ components:
           path: external-dns
           version: 1${EXTERNAL_DNS_VERSION#v0}
           repository: charts/external-dns
-      
+
       - name: external-dns-image
         version: ${EXTERNAL_DNS_VERSION}
         type: ociImage
