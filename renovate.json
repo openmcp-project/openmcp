@@ -3,7 +3,6 @@
   "git-submodules": {
     "enabled": true
   },
-  "minimumReleaseAge": "0 days",
   "extends": [
     "config:recommended",
     "config:best-practices",
@@ -11,6 +10,9 @@
     "helpers:pinGitHubActionDigests",
     ":rebaseStalePrs"
   ],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "minimumReleaseAge": "0 days",
   "postUpdateOptions": [
     "gomodTidy"
   ],
@@ -29,9 +31,11 @@
     },
     {
       "matchPackageNames": [
-        "github.com/openmcp-project/*"
+        "github.com/openmcp-project/*",
+        "openmcp-project/*"
       ],
-      "description": "Update all components from openmcp-project immediately",
+      "description": "Update all components from openmcp-project in a single PR",
+      "groupName": "openmcp-project components",
       "rebaseWhen": "auto",
       "minimumReleaseAge": "0 days",
       "enabled": true
