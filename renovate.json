@@ -11,6 +11,9 @@
     "helpers:pinGitHubActionDigests",
     ":rebaseStalePrs"
   ],
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "minimumReleaseAge": "0 days",
   "postUpdateOptions": [
     "gomodTidy"
   ],
