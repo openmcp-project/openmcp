@@ -37,7 +37,7 @@ PLATFORM_SERVICE_GATEWAY_VERSION: "v0.0.13"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-quota
 PLATFORM_SERVICE_QUOTA_VERSION: "v1.0.2"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-test-runner
-PLATFORM_SERVICE_TEST_RUNNER: "v1.0.1"
+PLATFORM_SERVICE_TEST_RUNNER_VERSION: "v1.0.1"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-project-workspace
 PLATFORM_SERVICE_PROJECT_WORKSPACE_VERSION: "v2.1.2"
 # renovate: datasource=github-releases depName=openmcp-project/usage-operator
@@ -60,7 +60,7 @@ GITOPS_TEMPLATES_VERSION: "v0.1.5"
 
 # renovate: datasource=github-releases depName=kubernetes-sigs/external-dns
 EXTERNAL_DNS_IMAGE_VERSION: "v0.21.0"
-# renovate: datasource=helm registryUrl=https://kubernetes-sigs.github.io/external-dns depName=external-dns
+# renovate: datasource=helm depName=external-dns registryUrl=https://kubernetes-sigs.github.io/external-dns
 EXTERNAL_DNS_CHART_VERSION: "1.21.0"
 
 # renovate: datasource=github-releases depName=fluxcd/source-controller
