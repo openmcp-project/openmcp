@@ -61,7 +61,7 @@ GITOPS_TEMPLATES_VERSION: "v0.1.5"
 # renovate: datasource=github-releases depName=kubernetes-sigs/external-dns
 EXTERNAL_DNS_IMAGE_VERSION: "v0.21.0"
 # renovate: datasource=helm depName=external-dns registryUrl=https://kubernetes-sigs.github.io/external-dns
-EXTERNAL_DNS_CHART_VERSION: "1.21.0"
+EXTERNAL_DNS_CHART_VERSION: "1.21.1"
 
 # renovate: datasource=github-releases depName=fluxcd/source-controller
 FLUXCD_SOURCE_CONTROLLER_VERSION: "v1.9.0"
