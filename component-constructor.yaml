@@ -111,15 +111,15 @@ components:
           type: helm
           helmRepository: https://kubernetes-sigs.github.io/external-dns
           path: external-dns
-          version: 1${EXTERNAL_DNS_VERSION#v0}
+          version: ${EXTERNAL_DNS_CHART_VERSION}
           repository: charts/external-dns
 
       - name: external-dns-image
-        version: ${EXTERNAL_DNS_VERSION}
+        version: ${EXTERNAL_DNS_IMAGE_VERSION}
         type: ociImage
         input:
           type: ociImage
-          path: registry.k8s.io/external-dns/external-dns:${EXTERNAL_DNS_VERSION}
+          path: registry.k8s.io/external-dns/external-dns:${EXTERNAL_DNS_IMAGE_VERSION}
           repository: images/external-dns
 
       - name: fluxcd-source-controller
