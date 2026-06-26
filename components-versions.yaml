@@ -33,7 +33,7 @@ PLATFORM_SERVICE_DNS_VERSION: "v0.0.8"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-gardener-ipam
 PLATFORM_SERVICE_GARDENER_IPAM_VERSION: "v0.2.2"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-gateway
-PLATFORM_SERVICE_GATEWAY_VERSION: "v0.0.13"
+PLATFORM_SERVICE_GATEWAY_VERSION: "v0.0.14"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-quota
 PLATFORM_SERVICE_QUOTA_VERSION: "v1.0.2"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-test-runner
