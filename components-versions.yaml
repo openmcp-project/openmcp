@@ -66,7 +66,7 @@ EXTERNAL_DNS_CHART_VERSION: "1.21.1"
 # renovate: datasource=github-releases depName=fluxcd/source-controller
 FLUXCD_SOURCE_CONTROLLER_VERSION: "v1.9.0"
 # renovate: datasource=github-releases depName=fluxcd/kustomize-controller
-FLUXCD_KUSTOMIZE_CONTROLLER_VERSION: "v1.9.0"
+FLUXCD_KUSTOMIZE_CONTROLLER_VERSION: "v1.9.1"
 # renovate: datasource=github-releases depName=fluxcd/helm-controller
 FLUXCD_HELM_CONTROLLER_VERSION: "v1.6.0"
 # renovate: datasource=github-releases depName=fluxcd/notification-controller
