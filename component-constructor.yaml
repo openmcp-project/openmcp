@@ -51,6 +51,10 @@ components:
         name: service-provider-flux
         version: ${SERVICE_PROVIDER_FLUX_VERSION}
 
+      - componentName: github.com/openmcp-project/service-provider-metrics-operator
+        name: service-provider-metrics-operator
+        version: ${SERVICE_PROVIDER_METRICS_OPERATOR_VERSION}
+
       - componentName: github.com/openmcp-project/service-provider-velero
         name: service-provider-velero
         version: ${SERVICE_PROVIDER_VELERO_VERSION}
