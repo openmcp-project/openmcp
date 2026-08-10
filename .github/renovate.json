@@ -1,0 +1,46 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>openmcp-project/.github:renovate-config"
+  ],
+  "git-submodules": {
+    "enabled": true
+  },
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "minimumReleaseAge": "0 days",
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "github.com/openmcp-project/*",
+        "openmcp-project/*"
+      ],
+      "description": "Update all components from openmcp-project in a single PR",
+      "groupName": "openmcp-project components",
+      "rebaseWhen": "auto",
+      "minimumReleaseAge": "0 days",
+      "enabled": true
+    },
+    {
+      "description": "Combine fluxcd updates in a single PR",
+      "matchDatasources": [
+        "go"
+      ],
+      "matchPackageNames": [
+        "/^github\\.com/fluxcd/"
+      ]
+    }
+  ],
+  "customManagers": [
+    {
+      "description": "All component dependencies and their versions used in the openMCP project.",
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/components-versions\\.yaml/"
+      ],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>[a-z-.]+?) depName=(?<depName>[^\\s]+?)(?: (lookupName|packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\s.+?_VERSION:[^\\S]*\"?(?<currentValue>.+?)\"?\\s"
+      ]
+    }
+  ]
+}
