@@ -103,6 +103,10 @@ components:
         name: platform-service-usage
         version: ${PLATFORM_SERVICE_USAGE_VERSION}
 
+      - componentName: github.com/openmcp-project/usage-operator
+        name: platform-service-usagev2
+        version: ${PLATFORM_SERVICE_USAGE_V2_VERSION}
+
       # observability-stack
       - componentName: github.com/openmcp-project/observability-stack
         name: observability-stack

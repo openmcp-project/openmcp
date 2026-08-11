@@ -42,8 +42,12 @@ PLATFORM_SERVICE_QUOTA_VERSION: "v1.1.0"
 PLATFORM_SERVICE_TEST_RUNNER_VERSION: "v1.1.0"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-project-workspace
 PLATFORM_SERVICE_PROJECT_WORKSPACE_VERSION: "v2.3.0"
-# renovate: datasource=github-releases depName=openmcp-project/usage-operator
+
+# Old usage operator. Version v0.1.0 is fix. Do not change it.
 PLATFORM_SERVICE_USAGE_VERSION: "v0.1.0"
+# New usage operator
+# renovate: datasource=github-releases depName=openmcp-project/usage-operator
+PLATFORM_SERVICE_USAGE_V2_VERSION: "v1.0.0"
 
 # observability-stack
 # renovate: datasource=github-releases depName=openmcp-project/observability-stack
