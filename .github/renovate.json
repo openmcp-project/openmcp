@@ -3,29 +3,14 @@
   "extends": [
     "github>openmcp-project/.github:renovate-config"
   ],
-  "git-submodules": {
-    "enabled": true
-  },
-  "prHourlyLimit": 0,
-  "prConcurrentLimit": 0,
-  "minimumReleaseAge": "0 days",
   "packageRules": [
     {
-      "matchPackageNames": [
-        "github.com/openmcp-project/*",
-        "openmcp-project/*"
-      ],
-      "description": "Update all components from openmcp-project in a single PR",
-      "groupName": "openmcp-project components",
-      "rebaseWhen": "auto",
-      "minimumReleaseAge": "0 days",
-      "enabled": true
-    },
-    {
-      "description": "Combine fluxcd updates in a single PR",
+      "description": "Group fluxcd updates in a single PR",
       "matchDatasources": [
         "go"
       ],
+      "groupName": "fluxcd dependencies",
+      "groupSlug": "fluxcd-dependencies",
       "matchPackageNames": [
         "/^github\\.com/fluxcd/"
       ]
