@@ -1,0 +1,31 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>openmcp-project/.github:renovate-config"
+  ],
+  "packageRules": [
+    {
+      "description": "Group fluxcd updates in a single PR",
+      "matchDatasources": [
+        "go"
+      ],
+      "groupName": "fluxcd dependencies",
+      "groupSlug": "fluxcd-dependencies",
+      "matchPackageNames": [
+        "/^github\\.com/fluxcd/"
+      ]
+    }
+  ],
+  "customManagers": [
+    {
+      "description": "All component dependencies and their versions used in the openMCP project.",
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/components-versions\\.yaml/"
+      ],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>[a-z-.]+?) depName=(?<depName>[^\\s]+?)(?: (lookupName|packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?(?: registryUrl=(?<registryUrl>[^\\s]+?))?\\s.+?_VERSION:[^\\S]*\"?(?<currentValue>.+?)\"?\\s"
+      ]
+    }
+  ]
+}
