@@ -1,7 +1,7 @@
 # renovate: datasource=github-releases depName=openmcp-project/control-plane-operator
 CONTROL_PLANE_OPERATOR_VERSION: "v0.5.0"
 # renovate: datasource=github-releases depName=openmcp-project/mcp-operator
-MCP_OPERATOR_VERSION: "v0.57.1"
+MCP_OPERATOR_VERSION: "v0.58.0"
 # renovate: datasource=github-releases depName=openmcp-project/openmcp-operator
 OPENMCP_OPERATOR_VERSION: "v1.3.0"
 
