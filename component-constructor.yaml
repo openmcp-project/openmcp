@@ -98,6 +98,10 @@ components:
       - componentName: github.com/openmcp-project/platform-service-project-workspace
         name: platform-service-project-workspace
         version: ${PLATFORM_SERVICE_PROJECT_WORKSPACE_VERSION}
+      
+      - componentName: github.com/openmcp-project/platform-service-resource-replicator
+        name: platform-service-resource-replicator
+        version: ${PLATFORM_SERVICE_RESOURCE_REPLICATOR_VERSION}
 
       - componentName: github.com/openmcp-project/usage-operator
         name: platform-service-usage
