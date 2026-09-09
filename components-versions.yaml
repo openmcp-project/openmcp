@@ -49,7 +49,7 @@ PLATFORM_SERVICE_RESOURCE_REPLICATOR_VERSION: "v0.1.1"
 PLATFORM_SERVICE_USAGE_VERSION: "v0.1.0"
 # New usage operator
 # renovate: datasource=github-releases depName=openmcp-project/usage-operator
-PLATFORM_SERVICE_USAGE_V2_VERSION: "v1.0.0"
+PLATFORM_SERVICE_USAGE_V2_VERSION: "v1.1.0"
 
 # observability-stack
 # renovate: datasource=github-releases depName=openmcp-project/observability-stack
