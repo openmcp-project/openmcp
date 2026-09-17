@@ -67,6 +67,10 @@ components:
         name: service-provider-kro
         version: ${SERVICE_PROVIDER_KRO_VERSION}
 
+      - componentName: github.com/open-component-model/service-provider-odg
+        name: service-provider-odg
+        version: ${SERVICE_PROVIDER_ODG_VERSION}
+
       # Cluster Providers
 
       - componentName: github.com/openmcp-project/cluster-provider-gardener
