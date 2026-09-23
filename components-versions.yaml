@@ -31,7 +31,7 @@ SERVICE_PROVIDER_KYVERNO_VERSION: "v1.1.0"
 # renovate: datasource=github-releases depName=openmcp-project/cluster-provider-gardener
 CLUSTER_PROVIDER_GARDENER_VERSION: "v0.16.1"
 # renovate: datasource=github-releases depName=openmcp-project/cluster-provider-kind
-CLUSTER_PROVIDER_KIND_VERSION: "v0.6.0"
+CLUSTER_PROVIDER_KIND_VERSION: "v0.6.1"
 
 # Platform Services
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-dns
