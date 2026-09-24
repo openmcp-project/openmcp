@@ -54,6 +54,10 @@ components:
       - componentName: github.com/openmcp-project/service-provider-metrics-operator
         name: service-provider-metrics-operator
         version: ${SERVICE_PROVIDER_METRICS_OPERATOR_VERSION}
+      
+      - componentName: github.com/openmcp-project/service-provider-otel-operator
+        name: service-provider-otel-operator
+        version: ${SERVICE_PROVIDER_OTEL_OPERATOR_VERSION}
 
       - componentName: github.com/openmcp-project/service-provider-velero
         name: service-provider-velero
