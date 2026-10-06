@@ -79,6 +79,10 @@ components:
         name: service-provider-kyverno
         version: ${SERVICE_PROVIDER_KYVERNO_VERSION}
 
+      - componentName: github.com/openmcp-project/service-provider-argocd
+        name: service-provider-argocd
+        version: ${SERVICE_PROVIDER_ARGOCD_VERSION}
+
       # Cluster Providers
 
       - componentName: github.com/openmcp-project/cluster-provider-gardener
