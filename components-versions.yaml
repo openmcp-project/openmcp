@@ -80,7 +80,7 @@ EXTERNAL_DNS_IMAGE_VERSION: "v0.23.0"
 EXTERNAL_DNS_CHART_VERSION: "1.23.0"
 
 # renovate: datasource=github-releases depName=fluxcd/source-controller
-FLUXCD_SOURCE_CONTROLLER_VERSION: "v1.9.5"
+FLUXCD_SOURCE_CONTROLLER_VERSION: "v1.9.6"
 # renovate: datasource=github-releases depName=fluxcd/kustomize-controller
 FLUXCD_KUSTOMIZE_CONTROLLER_VERSION: "v1.9.6"
 # renovate: datasource=github-releases depName=fluxcd/helm-controller
