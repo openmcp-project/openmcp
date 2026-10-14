@@ -239,14 +239,6 @@ components:
           path: docker.io/envoyproxy/gateway:${ENVOY_GATEWAY_IMAGE_VERSION}
           repository: images/envoy-gateway
 
-      - name: envoy-ratelimit-image
-        version: v0.0.0-latest
-        type: ociImage
-        input:
-          type: ociImage
-          path: docker.io/envoyproxy/ratelimit:${ENVOY_RATELIMIT_IMAGE_VERSION}
-          repository: images/envoy-ratelimit
-
     sources:
       - access:
           ref: "refs/tags/${OPENMCP_VERSION}"
