@@ -70,35 +70,3 @@ BOOTSTRAPPER_VERSION: "v0.19.9"
 # gitops templates for deployment
 # renovate: datasource=github-releases depName=openmcp-project/gitops-templates
 GITOPS_TEMPLATES_VERSION: "v0.1.6"
-
-# external dependencies
-# github.com/fluxcd
-
-# renovate: datasource=github-releases depName=kubernetes-sigs/external-dns
-EXTERNAL_DNS_IMAGE_VERSION: "v0.23.0"
-# renovate: datasource=helm depName=external-dns registryUrl=https://kubernetes-sigs.github.io/external-dns
-EXTERNAL_DNS_CHART_VERSION: "1.23.0"
-
-# renovate: datasource=github-releases depName=fluxcd/source-controller
-FLUXCD_SOURCE_CONTROLLER_VERSION: "v1.9.6"
-# renovate: datasource=github-releases depName=fluxcd/kustomize-controller
-FLUXCD_KUSTOMIZE_CONTROLLER_VERSION: "v1.9.6"
-# renovate: datasource=github-releases depName=fluxcd/helm-controller
-FLUXCD_HELM_CONTROLLER_VERSION: "v1.6.5"
-# renovate: datasource=github-releases depName=fluxcd/notification-controller
-FLUXCD_NOTIFICATION_CONTROLLER_VERSION: "v1.9.4"
-# renovate: datasource=github-releases depName=fluxcd/image-reflector-controller
-FLUXCD_IMAGE_REFLECTOR_CONTROLLER_VERSION: "v1.2.5"
-# renovate: datasource=github-releases depName=fluxcd/image-automation-controller
-FLUXCD_IMAGE_AUTOMATION_CONTROLLER_VERSION: "v1.2.5"
-
-# renovate: datasource=github-releases depName=external-secrets/external-secrets
-EXTERNAL_SECRETS_OPERATOR_VERSION: "v2.12.0"
-
-# envoy
-# renovate: datasource=github-releases depName=envoyproxy/gateway
-ENVOY_GATEWAY_CHART_VERSION: "v1.9.2"
-# renovate: datasource=github-releases depName=envoyproxy/envoy
-ENVOY_PROXY_IMAGE_VERSION: "v1.40.0"
-# renovate: datasource=github-releases depName=envoyproxy/gateway
-ENVOY_GATEWAY_IMAGE_VERSION: "v1.9.2"
