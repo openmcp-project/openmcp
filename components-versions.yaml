@@ -99,6 +99,6 @@ EXTERNAL_SECRETS_OPERATOR_VERSION: "v2.12.0"
 # renovate: datasource=github-releases depName=envoyproxy/gateway
 ENVOY_GATEWAY_CHART_VERSION: "v1.9.2"
 # renovate: datasource=github-releases depName=envoyproxy/envoy
-ENVOY_PROXY_IMAGE_VERSION: "v1.39.4"
+ENVOY_PROXY_IMAGE_VERSION: "v1.40.0"
 # renovate: datasource=github-releases depName=envoyproxy/gateway
 ENVOY_GATEWAY_IMAGE_VERSION: "v1.9.2"
