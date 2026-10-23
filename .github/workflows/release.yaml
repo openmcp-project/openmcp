@@ -102,7 +102,7 @@ jobs:
           tag_name: ${{ env.version }}
           name: Release ${{ env.version }}
           body_path: RELEASE_BODY.md
-          draft: true
+          draft: false
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
