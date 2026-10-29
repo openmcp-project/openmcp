@@ -1,13 +1,13 @@
 # renovate: datasource=github-releases depName=openmcp-project/control-plane-operator
-CONTROL_PLANE_OPERATOR_VERSION: "v0.5.3"
+CONTROL_PLANE_OPERATOR_VERSION: "v0.5.4"
 # renovate: datasource=github-releases depName=openmcp-project/mcp-operator
-MCP_OPERATOR_VERSION: "v0.58.2"
+MCP_OPERATOR_VERSION: "v0.58.3"
 # renovate: datasource=github-releases depName=openmcp-project/openmcp-operator
 OPENMCP_OPERATOR_VERSION: "v1.4.3"
 
 # Service Providers
 # renovate: datasource=github-releases depName=openmcp-project/service-provider-landscaper
-SERVICE_PROVIDER_LANDSCAPER_VERSION: "v1.3.2"
+SERVICE_PROVIDER_LANDSCAPER_VERSION: "v1.3.3"
 # renovate: datasource=github-releases depName=openmcp-project/service-provider-crossplane
 SERVICE_PROVIDER_CROSSPLANE_VERSION: "v1.5.2"
 # renovate: datasource=github-releases depName=openmcp-project/service-provider-external-secrets
@@ -15,19 +15,19 @@ SERVICE_PROVIDER_EXTERNAL_SECRETS_VERSION: "v1.2.5"
 # renovate: datasource=github-releases depName=openmcp-project/service-provider-flux
 SERVICE_PROVIDER_FLUX_VERSION: "v1.3.4"
 # renovate: datasource=github-releases depName=openmcp-project/service-provider-metrics-operator
-SERVICE_PROVIDER_METRICS_OPERATOR_VERSION: "v0.3.3"
+SERVICE_PROVIDER_METRICS_OPERATOR_VERSION: "v0.3.4"
 # renovate: datasource=github-releases depName=openmcp-project/service-provider-otel-operator
-SERVICE_PROVIDER_OTEL_OPERATOR_VERSION: "v1.0.1"
+SERVICE_PROVIDER_OTEL_OPERATOR_VERSION: "v1.0.2"
 # renovate: datasource=github-releases depName=openmcp-project/service-provider-velero
-SERVICE_PROVIDER_VELERO_VERSION: "v1.3.1"
+SERVICE_PROVIDER_VELERO_VERSION: "v1.3.2"
 # renovate: datasource=github-releases depName=open-component-model/service-provider-ocm
 SERVICE_PROVIDER_OCM_VERSION: "v0.6.0"
 # renovate: datasource=github-releases depName=openmcp-project/service-provider-kro
-SERVICE_PROVIDER_KRO_VERSION: "v1.5.1"
+SERVICE_PROVIDER_KRO_VERSION: "v1.5.2"
 # renovate: datasource=github-releases depName=open-component-model/service-provider-odg
 SERVICE_PROVIDER_ODG_VERSION: "v0.1.0"
 # renovate: datasource=github-releases depName=openmcp-project/service-provider-kyverno
-SERVICE_PROVIDER_KYVERNO_VERSION: "v1.1.3"
+SERVICE_PROVIDER_KYVERNO_VERSION: "v1.1.4"
 # renovate: datasource=github-releases depName=openmcp-project/service-provider-argocd
 SERVICE_PROVIDER_ARGOCD_VERSION: "v0.1.2"
 
@@ -39,13 +39,13 @@ CLUSTER_PROVIDER_KIND_VERSION: "v0.7.3"
 
 # Platform Services
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-dns
-PLATFORM_SERVICE_DNS_VERSION: "v0.2.2"
+PLATFORM_SERVICE_DNS_VERSION: "v0.2.3"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-gardener-ipam
-PLATFORM_SERVICE_GARDENER_IPAM_VERSION: "v0.4.2"
+PLATFORM_SERVICE_GARDENER_IPAM_VERSION: "v0.4.3"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-gateway
-PLATFORM_SERVICE_GATEWAY_VERSION: "v0.2.6"
+PLATFORM_SERVICE_GATEWAY_VERSION: "v0.2.7"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-quota
-PLATFORM_SERVICE_QUOTA_VERSION: "v1.2.2"
+PLATFORM_SERVICE_QUOTA_VERSION: "v1.2.3"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-test-runner
 PLATFORM_SERVICE_TEST_RUNNER_VERSION: "v1.4.2"
 # renovate: datasource=github-releases depName=openmcp-project/platform-service-project-workspace
@@ -57,7 +57,7 @@ PLATFORM_SERVICE_RESOURCE_REPLICATOR_VERSION: "v0.2.2"
 PLATFORM_SERVICE_USAGE_VERSION: "v0.1.0"
 # New usage operator
 # renovate: datasource=github-releases depName=openmcp-project/usage-operator
-PLATFORM_SERVICE_USAGE_V2_VERSION: "v1.1.3"
+PLATFORM_SERVICE_USAGE_V2_VERSION: "v1.1.4"
 
 # observability-stack
 # renovate: datasource=github-releases depName=openmcp-project/observability-stack
@@ -69,4 +69,4 @@ BOOTSTRAPPER_VERSION: "v0.19.10"
 
 # gitops templates for deployment
 # renovate: datasource=github-releases depName=openmcp-project/gitops-templates
-GITOPS_TEMPLATES_VERSION: "v0.1.6"
+GITOPS_TEMPLATES_VERSION: "v0.2.1"
