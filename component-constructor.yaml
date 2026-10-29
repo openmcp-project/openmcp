@@ -133,13 +133,3 @@ components:
         version: ${OBSERVABILITY_STACK_VERSION}
 
     resources: []
-
-    sources:
-      - access:
-          ref: "refs/tags/${OPENMCP_VERSION}"
-          commit: "${OPENMCP_VERSION_COMMIT}"
-          type: gitHub
-          repoUrl: https://github.com/openmcp-project/openmcp
-        name: openmcp
-        type: git
-        version: ${OPENMCP_VERSION}
