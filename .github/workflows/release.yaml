@@ -76,7 +76,7 @@ jobs:
 
       - name: setup OCM
         if: ${{ env.SKIP != 'true' }}
-        uses: open-component-model/ocm-setup-action@5755dc5c01c939f7dbba3bb07f9fb9b019a7a2a0 # main
+        uses: open-component-model/ocm-setup-action@5755dc5c01c939f7dbba3bb07f9fb9b019a7a2a0 # v1.1.0
 
       - name: Create OCM CTF
         if: ${{ env.SKIP != 'true' }}
