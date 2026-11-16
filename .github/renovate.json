@@ -6,6 +6,11 @@
   ],
   "packageRules": [
     {
+      "matchManagers": ["github-actions"],
+      "matchPackageNames": ["open-component-model/ocm-setup-action"],
+      "allowedVersions": "<2"
+    },
+    {
       "description": "Group fluxcd updates in a single PR",
       "matchDatasources": [
         "go"
