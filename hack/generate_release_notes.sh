@@ -7,7 +7,7 @@ fi
 
 CTF_DIR="$1"
 
-references=$(ocm get references "$CTF_DIR///github.com/openmcp-project/openmcp" -o json|jq -r '.items[].element | "\(.name) \(.componentName) \(.version)"')
+references=$(ocm get cv "ctf::$CTF_DIR//github.com/openmcp-project/openmcp" -o json|jq -r '.[].component.componentReferences[] | "\(.name) \(.componentName) \(.version)"')
 
 echo "$references" | while read -r name repo version; do
     export REPO=$name
