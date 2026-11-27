@@ -83,6 +83,12 @@ jobs:
           chmod +x "$RUNNER_TEMP/ocm"
           echo "$RUNNER_TEMP" >> "$GITHUB_PATH"
 
+      - name: Install cosign
+        if: ${{ env.SKIP != 'true' }}
+        uses: sigstore/cosign-installer@881c63bd87e38389154debd8331404ce7ca8a3ab # v4.1.4
+        with:
+          cosign-release: v3.1.4
+
       - name: Create OCM CTF
         if: ${{ env.SKIP != 'true' }}
         env:
@@ -91,6 +97,10 @@ jobs:
           ocm add cv --config ocm-config.yaml \
             --constructor component-constructor.yaml \
             --repository ctf::openmcp-ctf
+
+      - name: Sign OCM component
+        if: ${{ env.SKIP != 'true' }}
+        run: ocm sign cv --config ocm-config.yaml "ctf::openmcp-ctf//${OCM_COMPONENT}:${{ env.version }}"
 
       - name: Build Changelog
         if: ${{ env.SKIP != 'true' }}

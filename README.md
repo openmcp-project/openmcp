@@ -7,7 +7,7 @@
 This repository contains the umbrella openMCP component, which is a collection of openMCP open-source components which can be deployed together to create an openMCP landscape.
 The component is built with the [Open Component Model (OCM)](https://ocm.software). This component does not contain any resource definitions, but only references to other components.
 The referenced components are defined in the file `component-constructor.yaml` in the root directory of this repository.
-The versions of the referenced components are defined in the file `component-versions.yaml` in the root directory of this repository.
+The versions of the referenced components are defined in the file `component-constructor.yaml` in the root directory of this repository.
 
 ## Requirements and Setup
 
@@ -16,8 +16,32 @@ To view a specific version of the openMCP component inclusive all dependencies, 
 
 ```bash
 OPENMCP_VERSION=v0.0.7
-ocm get component --repo=OCIRegistry::ghcr.io/openmcp-project/components github.com/openmcp-project/openmcp:${OPENMCP_VERSION} -o yaml --recursive
+ocm get cv ghcr.io/openmcp-project/components//github.com/openmcp-project/openmcp:${OPENMCP_VERSION} -o yaml --recursive
 ```
+
+## Verifying a Release
+
+The openMCP component version is signed keyless with [Sigstore](https://www.sigstore.dev/) by the release workflow.
+
+Verify a component version with the OCM CLI. The expected signer goes into an OCM configuration file:
+
+```yaml
+# verify.yaml
+type: generic.config.ocm.software/v1
+configurations:
+  - type: signing.config.ocm.software/v1alpha1
+    signature: default
+    verifier:
+      type: SigstoreVerificationConfiguration/v1alpha1
+      certificateIdentity: https://github.com/openmcp-project/openmcp/.github/workflows/release.yaml@refs/heads/main
+      certificateOIDCIssuer: https://token.actions.githubusercontent.com
+```
+
+```bash
+ocm verify cv --config verify.yaml ghcr.io/openmcp-project/components//github.com/openmcp-project/openmcp:${OPENMCP_VERSION}
+```
+
+The command fails if the component version is unsigned or was signed by anything other than that workflow on the `main` branch.
 
 ## Support, Feedback, Contributing
 
