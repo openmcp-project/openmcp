@@ -5,18 +5,20 @@ on:
   push:
     branches:
       - main
-      
-permissions: 
+
+permissions:
   contents: write # we need this to be able to push tags
   pull-requests: read # we need this to be able to read pull-requests body
   issues: read # we need this to be able to read pull-requests body
-  packages: write # we need this to be able to push ocm packages 
-  attestations: write # we need this to be able to push ocm packages 
-  id-token: write # we need this to be able to push ocm packages 
+  packages: write # we need this to be able to push ocm packages
+  attestations: write # we need this to be able to push ocm packages
+  id-token: write # we need this to be able to push ocm packages
 
 env:
   OCI_URL: ghcr.io/openmcp-project/components
-  
+  OCM_VERSION: v0.25.0
+  OCM_COMPONENT: github.com/openmcp-project/openmcp
+
 jobs:
   release_tag:
     name: Release version
@@ -40,7 +42,7 @@ jobs:
           fi
           echo "New version: $VERSION"
           echo "version=$VERSION" >> $GITHUB_ENV
-    
+
       - name: Check if VERSION is already tagged
         id: check_tag
         run: |
@@ -50,7 +52,7 @@ jobs:
             exit 0
           fi
           echo "Tag ${{ env.version }} doesn't exists. Proceeding with release."
-      
+
       - name: Skip release if version is a dev version
         if: contains(env.version, '-dev')
         run: |
@@ -76,15 +78,30 @@ jobs:
 
       - name: setup OCM
         if: ${{ env.SKIP != 'true' }}
-        uses: open-component-model/ocm-setup-action@5755dc5c01c939f7dbba3bb07f9fb9b019a7a2a0 # v1.1.0
+        run: |
+          curl -fsSL "https://github.com/open-component-model/open-component-model/releases/download/${OCM_VERSION}/ocm-linux-amd64" --output "$RUNNER_TEMP/ocm"
+          chmod +x "$RUNNER_TEMP/ocm"
+          echo "$RUNNER_TEMP" >> "$GITHUB_PATH"
+
+      - name: Install cosign
+        if: ${{ env.SKIP != 'true' }}
+        uses: sigstore/cosign-installer@881c63bd87e38389154debd8331404ce7ca8a3ab # v4.1.4
+        with:
+          cosign-release: v3.1.4
 
       - name: Create OCM CTF
         if: ${{ env.SKIP != 'true' }}
+        env:
+          OPENMCP_VERSION: ${{ env.version }}
         run: |
-          ocm add componentversions --create \
-          --file openmcp-ctf component-constructor.yaml \
-          --settings components-versions.yaml  -- OPENMCP_VERSION=${{ env.version }} OPENMCP_VERSION_COMMIT=$(git show-ref --hash ${{ env.version }})
-          
+          ocm add cv --config ocm-config.yaml \
+            --constructor component-constructor.yaml \
+            --repository ctf::openmcp-ctf
+
+      - name: Sign OCM component
+        if: ${{ env.SKIP != 'true' }}
+        run: ocm sign cv --config ocm-config.yaml "ctf::openmcp-ctf//${OCM_COMPONENT}:${{ env.version }}"
+
       - name: Build Changelog
         if: ${{ env.SKIP != 'true' }}
         id: constructed_release
@@ -106,7 +123,7 @@ jobs:
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - name: Login to GitHub Container Registry
         if: ${{ env.SKIP != 'true' }}
         uses: docker/login-action@8aa5831fb8d48d8f76594c7ddde61ae58019f550 # v4
@@ -114,8 +131,13 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-     
+
       - name: Push CTF
         if: ${{ env.SKIP != 'true' }}
         run: |
-          ocm transfer ctf --copy-resources ./openmcp-ctf/ ${{ env.OCI_URL }} 
+          # ocm replaces existing versions and has no flag to prevent it.
+          if ocm get cv "${OCI_URL}//${OCM_COMPONENT}:${{ env.version }}"; then
+            echo "${OCM_COMPONENT}:${{ env.version }} already exists in ${OCI_URL}." >&2
+            exit 1
+          fi
+          ocm transfer cv "ctf::openmcp-ctf//${OCM_COMPONENT}:${{ env.version }}" "${OCI_URL}"
